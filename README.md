@@ -1,107 +1,132 @@
-# 📝 Yapay Zekâ Destekli Not Defteri Uygulaması
 
-Bu proje, React tabanlı bir not defteri uygulamasıdır. Kullanıcılar not oluşturabilir, düzenleyebilir, silebilir ve silinen notları Çöp Kutusu’nda görüntüleyebilir.  
-Ayrıca uygulama, **not içeriğine göre otomatik başlık öneren** yapay zekâ destekli bir özelliğe sahiptir.
+# 📒 Not Defteri Uygulaması (AI Destekli)
 
----
-
-## 🚀 Özellikler
-
-- Yeni not ekleme
-- Notları düzenleme
-- Notları silme ve Çöp Kutusu’na taşıma
-- Çöp Kutusu’ndan not geri yükleme veya kalıcı silme
-- Otomatik başlık önerme (AI destekli)
-- Gerçek zamanlı veri yönetimi (Firebase)
-- Temiz ve sade kullanıcı arayüzü
+Bu proje, kullanıcıların notlarını kolayca oluşturabildiği, düzenleyebildiği, silebildiği ve çöp kutusundan geri yükleyebildiği bir **React + Firebase** not uygulamasıdır.
+Ek olarak uygulama, yazılan not içeriğini analiz ederek **otomatik başlık önerisi** sunan bir **yapay zekâ özelliği** içerir.
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+## 🚀 Kullanılan Teknolojiler
 
-- **React**
-- **Firebase (Firestore + Authentication))**
-- **Node.js**
-- **Express (AI backend)**
-- **JavaScript**
-- **CSS**
+### **Frontend**
 
----
+* React.js
+* React Router
+* Context API
+* CSS ile stil yönetimi
 
-## 📂 Proje Yapısı (Özet)
+### **Backend & Database**
 
+* Firebase Authentication
+* Firebase Firestore
+
+### **Yapay Zekâ**
+
+Uygulamadaki otomatik başlık önerisi, **Mistral AI – Mistral Nemo** modeli kullanılarak oluşturulmuştur.
+Yapay zekâ istekleri **OpenRouter API** üzerinden yapılır.
+
+**Kullanılan Model:**
+
+```txt
+Mistral AI – Mistral Nemo
+model: "mistralai/mistral-nemo"
 ```
 
+---
+
+## 📌 Özellikler
+
+### ✏️ Not Yönetimi
+
+* Yeni not oluşturma
+* Notları listeleme
+* Not düzenleme
+* Not silme
+* Silinenleri **çöp kutusuna taşıma**
+* Çöp kutusundan geri yükleme veya tamamen silme
+
+### 🤖 Yapay Zekâ Başlık Önerisi
+
+* Yazdığınız not metnini analiz eder
+* İçeriğe en uygun başlığı otomatik önerir
+* Kullanıcı isterse öneriyi direkt kullanabilir
+
+---
+
+## 🗂️ Proje Yapısı
+
+```
 src/
-│── pages/
-│── components/
-│── firebase/
-│── App.js
-│── index.js
-ai-backend/
-│── index.js
-│── package.json
-
+├── pages/
+│   ├── Notlar/
+│   ├── NotEkle/
+│   ├── NotDuzenle/
+│   ├── NotDetay/
+│   ├── CopKutusu/
+│   └── Auth/
+├── firebase/
+│   └── firebase.js
+├── App.js
+└── index.js
 ```
 
 ---
 
-## 🔧 Kurulum
+## 🔥 Firebase Yapılandırması
 
-Projenin çalışması için aşağıdaki adımları izleyin:
+`src/firebase/firebase.js` içerisinde Firebase ayarları bulunur.
+Projeyi çalıştırmak isteyenlerin kendi Firebase yapılandırmasını eklemesi gerekir.
 
-### 1. Depoyu klonlayın
+---
+
+## 🤖 Yapay Zekâ API Kullanımı
+
+Başlık önerisi istemi örneği:
+
+```js
+const completion = await client.responses.create({
+  model: "mistralai/mistral-nemo",
+  input: `Bu not için bir başlık öner: ${inputValue}`,
+});
 ```
 
-git clone [https://github.com/Ayszgn/react-notepad-ai.git](https://github.com/Ayszgn/react-notepad-ai.git)
+---
 
+## 🛠️ Kurulum
+
+### 1. Projeyi klonlayın
+
+```bash
+git clone https://github.com/Ayszgn/react-notepad-ai.git
 ```
 
-### 2. Proje klasörüne gidin
-```
+### 2. Gerekli paketleri yükleyin
 
-cd react-notepad-ai
-
-```
-
-### 3. Gerekli paketleri yükleyin
-```
-
+```bash
 npm install
-
 ```
 
-### 4. Firebase yapılandırmanızı ekleyin  
-`src/firebase/firebase.js` dosyasına kendi Firebase ayarlarınızı ekleyin.
+### 3. Firebase ayarlarını yapın
 
-### 5. Projeyi başlatın
+`firebase.js` içine kendi Firebase config’inizi ekleyin.
+
+### 4. OpenRouter API anahtarını `.env` içine ekleyin
+
+```
+REACT_APP_OPENROUTER_API_KEY=your_api_key_here
 ```
 
+### 5. Projeyi çalıştırın
+
+```bash
 npm start
-
 ```
 
 ---
 
-## 🤖 Yapay Zekâ Başlık Önerisi Nasıl Çalışır?
+## 📄 Lisans
 
-Uygulama, notun içeriğini analiz ederek en uygun başlığı öneren bir AI fonksiyonu kullanır.
-
-- Not içeriği alınıyor.
-- Backend tarafında AI modeli başlığı oluşturuyor.
-- Kullanıcı isterse öneriyi kabul eder veya düzenler.
+Bu proje kişisel kullanım amaçlı oluşturulmuştur.
 
 ---
-
-## 📜 Lisans
-
-Bu proje MIT lisansı ile sunulmuştur.
-
----
-
-## 👩‍💻 Geliştirici
-
-**Ayşegül Y.**  
-Frontend Developer  
-GitHub: https://github.com/Ayszgn
 
