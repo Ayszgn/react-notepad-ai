@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# react-notepad-ai
+A smart note-taking web application built with React and Firebase. Users can create, edit, delete, and restore notes, while also benefiting from AI-powered features such as automatic summaries and intelligent title suggestions.
+>>>>>>> dbdd15608d3e734834335a2d50b43c510bc72c17
