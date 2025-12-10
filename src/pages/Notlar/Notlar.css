@@ -1,0 +1,117 @@
+.page-header {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: -5px; /* Altına boşluk */
+}
+
+.notes-container {
+  max-width: 800px; /* Daha geniş veya istediğin boyut */
+  margin: 30px auto;
+  padding: 25px;
+  background-color: rgba(248, 249, 250, 0.2); /* Daha şeffaf, istediğin gibi ayarla */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-height: 300px; /* İstersen sabit bir yükseklik */
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Kartlar arasına boşluk */
+  justify-content: center; /* Ortala */
+}
+.note-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  width: 280px; /* Kart genişliği */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.note-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.note-card p {
+  color: #666;
+   font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;       /* Chrome, Safari, Edge */
+  -webkit-box-orient: vertical; 
+  line-clamp: 5;               /* Standard property */
+  box-orient: vertical;        /* Standard property */
+}
+.trash-icon-button {
+  position: absolute;
+  margin-top: 10px;
+  left: 50px;
+  background-color: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+.logout-icon-button {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+  margin-right: -700px;
+}
+.logout-icon-button:hover svg {
+  color: #46dc35;
+}
+.note-add-button {
+  margin-top: 15px;
+  padding: 12px 28px;
+  background-color: rgba(255, 255, 255, 0.3); /* Beyaz, %30 şeffaf */
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.note-add-button:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Hoverda biraz daha görünür */
+}
+.note-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+.note-preview {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+

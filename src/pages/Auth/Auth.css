@@ -1,0 +1,196 @@
+/* Genel konteyner */
+.login-container {
+  max-width: 400px;
+  padding: 30px 40px;
+  background-color: rgba(255, 255, 255, 0.15); /* Daha saydam ve hoş */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  backdrop-filter: blur(5px); /* Arka planı cam efekti gibi yapar */
+}
+
+.register-link {
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+/* Başlık */
+.login-title {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputlar */
+.login-input {
+  background-color: rgba(248, 249, 250, 0.5); /* %85 saydam */
+  padding: 12px 15px;
+  border: 1.8px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* Giriş Yap butonu */
+.login-button {
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* "Hesabınız yok mu?" metni */
+.register-text {
+  margin-top: 20px;
+  color: #000000;
+  font-size: 15px;
+}
+
+/* Kayıt Ol butonu */
+.register-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.register-button:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  background: linear-gradient(-45deg, #a01212, #572195, #469bc2, #3db38a);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes gradientShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+/* Başlık alanı */
+.page-header {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: -5px; /* Altına boşluk */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.project-name {
+  font-size: 80px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5px;
+}
+
+/* Başlığı saran kutu */
+.shining-header {
+  position: relative;
+  display: inline-block;
+}
+
+/* Yıldız kutusu */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Yıldızlar */
+.star {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px white;
+  opacity: 0.8;
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+/* Parlama animasyonu */
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 1;
+  }
+}
+
+.error-text {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.success-text {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.note-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(248, 249, 250, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+
