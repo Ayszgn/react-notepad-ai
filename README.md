@@ -1,75 +1,107 @@
+# 📝 Yapay Zekâ Destekli Not Defteri Uygulaması
 
-# Getting Started with Create React App
+Bu proje, React tabanlı bir not defteri uygulamasıdır. Kullanıcılar not oluşturabilir, düzenleyebilir, silebilir ve silinen notları Çöp Kutusu’nda görüntüleyebilir.  
+Ayrıca uygulama, **not içeriğine göre otomatik başlık öneren** yapay zekâ destekli bir özelliğe sahiptir.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 🚀 Özellikler
 
-In the project directory, you can run:
+- Yeni not ekleme
+- Notları düzenleme
+- Notları silme ve Çöp Kutusu’na taşıma
+- Çöp Kutusu’ndan not geri yükleme veya kalıcı silme
+- Otomatik başlık önerme (AI destekli)
+- Gerçek zamanlı veri yönetimi (Firebase)
+- Temiz ve sade kullanıcı arayüzü
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Kullanılan Teknolojiler
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**
+- **Firebase (Firestore + Authentication))**
+- **Node.js**
+- **Express (AI backend)**
+- **JavaScript**
+- **CSS**
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📂 Proje Yapısı (Özet)
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+src/
+│── pages/
+│── components/
+│── firebase/
+│── App.js
+│── index.js
+ai-backend/
+│── index.js
+│── package.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🔧 Kurulum
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Projenin çalışması için aşağıdaki adımları izleyin:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Depoyu klonlayın
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone [https://github.com/Ayszgn/react-notepad-ai.git](https://github.com/Ayszgn/react-notepad-ai.git)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
+### 2. Proje klasörüne gidin
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+cd react-notepad-ai
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+### 3. Gerekli paketleri yükleyin
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm install
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 4. Firebase yapılandırmanızı ekleyin  
+`src/firebase/firebase.js` dosyasına kendi Firebase ayarlarınızı ekleyin.
 
-### Making a Progressive Web App
+### 5. Projeyi başlatın
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm start
 
-### Advanced Configuration
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🤖 Yapay Zekâ Başlık Önerisi Nasıl Çalışır?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Uygulama, notun içeriğini analiz ederek en uygun başlığı öneren bir AI fonksiyonu kullanır.
 
-### `npm run build` fails to minify
+- Not içeriği alınıyor.
+- Backend tarafında AI modeli başlığı oluşturuyor.
+- Kullanıcı isterse öneriyi kabul eder veya düzenler.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# react-notepad-ai
-A smart note-taking web application built with React and Firebase. Users can create, edit, delete, and restore notes, while also benefiting from AI-powered features such as automatic summaries and intelligent title suggestions.
- dbdd15608d3e734834335a2d50b43c510bc72c17
+---
+
+## 📜 Lisans
+
+Bu proje MIT lisansı ile sunulmuştur.
+
+---
+
+## 👩‍💻 Geliştirici
+
+**Ayşegül Y.**  
+Frontend Developer  
+GitHub: https://github.com/Ayszgn
+
